@@ -1,0 +1,31 @@
+/* 
+  Localizable.strings
+  weather
+
+  Created by mac on 2.04.22.
+  
+*/
+// MARK: WEATHER
+"tabBarItem_title_weather" = "Weather";
+"textField_text" = "Enter the name of the city";
+"tempIsFeltLabel_text" = "Feels like";
+"labelWeather_text" = "Weather";
+"buttonHistory_text" = "Search history";
+"button_back_text" = "Back";
+"segment_city_text" = "City";
+"segment_map_text" = "Map";
+// MARK: MAP
+"tabBarItem_title_map" = "Map";
+"country_text" = "Country";
+"temp_text" = "Temperature";
+"temp_min_text" = "Temperature min.";
+"temp_max_text" = "Temperature max.";
+"humidity_text" = "Humidity";
+"wind_text" = "Wind";
+"lon_text" = "lon.";
+"lat_text" = "lat.";
+// MARK: NEWS
+"tabBarItem_title_news" = "News";
+// MARK: SearchHistory
+"labelSegmentedCity_text" = "Сity ​​search history";
+"labelSegmentedMap_text" = "Map search history";

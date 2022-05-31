@@ -1,0 +1,31 @@
+/* 
+  Localizable.strings
+  weather
+
+  Created by mac on 2.04.22.
+  
+*/
+// MARK: WEATHER
+"tabBarItem_title_weather" = "Погода";
+"textField_text" = "Введите название города";
+"tempIsFeltLabel_text" = "Ощущается как";
+"labelWeather_text" = "Погода";
+"buttonHistory_text" = "История поиска ";
+"button_back_text" = "Назад";
+"segment_city_text" = "Город";
+"segment_map_text" = "Карта";
+// MARK: MAP
+"tabBarItem_title_map" = "Карта";
+"country_text" = "Страна";
+"temp_text" = "Температура";
+"temp_min_text" = "Температура мин.";
+"temp_max_text" = "Температура макс.";
+"humidity_text" = "Влажность";
+"wind_text" = "Ветер";
+"lon_text" = "дол.";
+"lat_text" = "шир.";
+// MARK: NEWS
+"tabBarItem_title_news" = "Новости";
+// MARK: SearchHistory
+"labelSegmentedCity_text" = "История поиска по городу";
+"labelSegmentedMap_text" = "История поиска по карте";
