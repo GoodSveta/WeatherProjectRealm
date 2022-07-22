@@ -31,6 +31,8 @@
 		04883B7528206765008BD980 /* GoogleMapViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04883B7428206765008BD980 /* GoogleMapViewController.storyboard */; };
 		048AD7F127F8C8B7003AA763 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 048AD7EC27F8C8B7003AA763 /* Localizable.strings */; };
 		048AD7F227F8C8B7003AA763 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 048AD7EF27F8C8B7003AA763 /* Localizable.strings */; };
+		0499618C284891130073C459 /* WeatherDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0499618B284891130073C459 /* WeatherDB.swift */; };
+		0499618E2848F0280073C459 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0499618D2848F0280073C459 /* RealmManager.swift */; };
 		049B1EFE27EC6E3A00681BAA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049B1EFD27EC6E3A00681BAA /* AppDelegate.swift */; };
 		049B1F0027EC6E3A00681BAA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049B1EFF27EC6E3A00681BAA /* SceneDelegate.swift */; };
 		049B1F0727EC6E3E00681BAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 049B1F0627EC6E3E00681BAA /* Assets.xcassets */; };
@@ -96,6 +98,8 @@
 		048AD7E627F8C6B4003AA763 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		048AD7ED27F8C8B7003AA763 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Localizable.strings; sourceTree = "<group>"; };
 		048AD7F027F8C8B7003AA763 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = Localizable.strings; sourceTree = "<group>"; };
+		0499618B284891130073C459 /* WeatherDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDB.swift; sourceTree = "<group>"; };
+		0499618D2848F0280073C459 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		049B1EFA27EC6E3A00681BAA /* weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = weather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		049B1EFD27EC6E3A00681BAA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		049B1EFF27EC6E3A00681BAA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -250,6 +254,14 @@
 			path = ru.lproj;
 			sourceTree = "<group>";
 		};
+		0499618A284890CB0073C459 /* RealmModels */ = {
+			isa = PBXGroup;
+			children = (
+				0499618B284891130073C459 /* WeatherDB.swift */,
+			);
+			path = RealmModels;
+			sourceTree = "<group>";
+		};
 		049B1EF127EC6E3A00681BAA = {
 			isa = PBXGroup;
 			children = (
@@ -302,6 +314,7 @@
 		049B1F1227EC6EE500681BAA /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				0499618A284890CB0073C459 /* RealmModels */,
 				049EC36E280ADFB900A8EDEC /* CoreDataModels */,
 				04B9BB5427F59D2500EF4CB9 /* News.swift */,
 				047DBB3027EE01D400ACAB24 /* Weather.swift */,
@@ -330,6 +343,7 @@
 				04827274281B4ED40021EA5F /* ServiceManager.swift */,
 				04A21CA9282134940085F76F /* RCManager.swift */,
 				04CF5ADC282FD62C009546C6 /* TimerADs.swift */,
+				0499618D2848F0280073C459 /* RealmManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -660,6 +674,7 @@
 				049EC399280AFF3600A8EDEC /* SearchHistoryViewController.swift in Sources */,
 				049B6AF52818923D00B81930 /* FileServiceManager.swift in Sources */,
 				049B1F3527ECDE2D00681BAA /* UIViewController + CoreKit.swift in Sources */,
+				0499618C284891130073C459 /* WeatherDB.swift in Sources */,
 				049B1EFE27EC6E3A00681BAA /* AppDelegate.swift in Sources */,
 				049B1F0027EC6E3A00681BAA /* SceneDelegate.swift in Sources */,
 				04A36D13280CBE3700DFCBA7 /* SearchHistoryCityTableViewCell.swift in Sources */,
@@ -673,6 +688,7 @@
 				0480369E27F1B67300C9D3E4 /* StartCityViewController.swift in Sources */,
 				049B1F2827EC765700681BAA /* NewsViewController.swift in Sources */,
 				049EC396280AF57500A8EDEC /* WeatherDataBase.xcdatamodeld in Sources */,
+				0499618E2848F0280073C459 /* RealmManager.swift in Sources */,
 				04A48B5428225B17006C5D6A /* OnboardingViewController.swift in Sources */,
 				047DBB3327EE04D000ACAB24 /* NetworkServiceManager.swift in Sources */,
 				049EC3A2280B438E00A8EDEC /* WeatherDB+CoreDataClass.swift in Sources */,

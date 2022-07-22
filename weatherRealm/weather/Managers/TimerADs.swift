@@ -18,7 +18,7 @@ class TimerADs: NSObject {
     private var interstitial: GADInterstitialAd?
 
     func startTimer() {
-        timerInterstitial = Timer.scheduledTimer(withTimeInterval: 10.0, repeats: false, block: { _ in
+        timerInterstitial = Timer.scheduledTimer(withTimeInterval: 120.0, repeats: false, block: { _ in
             self.loadIntersAds()
         }
    )}

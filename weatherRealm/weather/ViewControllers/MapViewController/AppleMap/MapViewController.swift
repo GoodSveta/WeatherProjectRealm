@@ -84,7 +84,8 @@ class MapViewController: UIViewController {
     private func getCoordinate(by lat: Double?, and lon: Double?) {
         
         NetworkServiceManager.shared.getWeatherCoordinate(by: lat, and: lon) { [weak self] welcome in self?.coordinateWeather = welcome
-            CoreDataManager.shared.addWeather(by: welcome, source: SourceType.weatherMap)
+//            CoreDataManager.shared.addWeather(by: welcome, source: SourceType.weatherMap)
+            RealmManager.shared.addWeather(weather: welcome, source: SourceType.weatherMap)
         } onError: { [weak self] error in
             guard let error = error else { return }
             self?.showAllert(with: error)

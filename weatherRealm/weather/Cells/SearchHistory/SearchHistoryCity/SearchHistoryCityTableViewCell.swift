@@ -78,7 +78,7 @@ class SearchHistoryCityTableViewCell: UITableViewCell {
         }
     }
     
-    func getWeatherDB(with weather: Welcome, source: SourceType = .wearherCity) {
+    func getWeatherDB(with weather: Welcome, source: SourceType = .weatherCity) {
         labelName.text = weather.name
         date = Int64(weather.dt)
         labelDate.text = ServiceManager.shared.unixTimeConvertion(unixTime: Double(weather.dt))
@@ -96,7 +96,9 @@ class SearchHistoryCityTableViewCell: UITableViewCell {
     }
     
     @IBAction func clickButtonDelete(_ sender: UIButton) {
-        CoreDataManager.shared.cleareDBbyDate(date: Int64(date ?? 0))
+        RealmManager.shared.deleteRealmByDate(date: date ?? 0)
+       
+//        CoreDataManager.shared.cleareDBbyDate(date: Int64(date ?? 0))
        
         clickDeleteRow?()
     }

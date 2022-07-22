@@ -66,12 +66,14 @@ class SearchHistoryViewController: UIViewController {
     func fetchRequest() {
         if segmentedControl.selectedSegmentIndex == 0 {
             historyCity.removeAll()
-            let citySource = CoreDataManager.shared.getWeatherFromDB(source: SourceType.wearherCity.rawValue)
+            let citySource = RealmManager.shared.getWeatherRealm(source: SourceType.weatherCity.rawValue)
+//            let citySource = CoreDataManager.shared.getWeatherFromDB(source: SourceType.weatherCity.rawValue)
             historyCity.append(contentsOf: citySource)
             tableView.reloadData()
         } else {
             historyMap.removeAll()
-            let mapSource = CoreDataManager.shared.getWeatherFromDB(source: SourceType.weatherMap.rawValue)
+            let mapSource = RealmManager.shared.getWeatherRealm(source: SourceType.weatherMap.rawValue)
+//            let mapSource = CoreDataManager.shared.getWeatherFromDB(source: SourceType.weatherMap.rawValue)
             historyMap.append(contentsOf: mapSource)
             tableView.reloadData()
         }
@@ -85,7 +87,8 @@ class SearchHistoryViewController: UIViewController {
     }
     
     @IBAction func deleteButton(_ sender: UIButton) {
-        CoreDataManager.shared.cleareDataBase()
+//        CoreDataManager.shared.cleareDataBase()
+        RealmManager.shared.deleteRealmAll()
         historyCity.removeAll()
         historyMap.removeAll()
         buttonDelete.isHidden = true
@@ -111,7 +114,8 @@ extension SearchHistoryViewController: UITableViewDataSource {
         switch segmentedControl.selectedSegmentIndex {
         case 0:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "SearchHistoryCityTableViewCell") as? SearchHistoryCityTableViewCell else { return UITableViewCell() }
-            cell.getWeatherDB(with: historyCity[indexPath.row], source: .wearherCity)
+           
+            cell.getWeatherDB(with: historyCity[indexPath.row], source: .weatherCity)
             cell.clickDeleteRow = { [weak self] in
                 self?.fetchRequest() }
             cell.selectionStyle = .none

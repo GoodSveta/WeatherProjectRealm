@@ -169,7 +169,8 @@ class CityViewController: UIViewController {
     private func getWeather() {
         NetworkServiceManager.shared.getWeather(with: cityGet ?? "Minsk") { [weak self] welcome in self?.weatherCity = welcome
             self?.activityIndicatorView.stopAnimating()
-            CoreDataManager.shared.addWeather(by: welcome, source: SourceType.wearherCity)
+            RealmManager.shared.addWeather(weather: welcome, source: SourceType.weatherCity)
+//            CoreDataManager.shared.addWeather(by: welcome, source: SourceType.weatherCity)
         } onError: { [weak self] error in
             guard let error = error else { return }
             self?.showAllert(with: error)

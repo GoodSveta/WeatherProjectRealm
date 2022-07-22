@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import Alamofire
 
 class NetworkServiceManager {
     static let shared = NetworkServiceManager()
@@ -14,62 +15,68 @@ class NetworkServiceManager {
     func getWeather(with city: String = "Minsk", onCompleted: @escaping (Welcome) -> (),
                     onError: ((String?) -> ())?) {
         guard let url = API.city.getNameCityURL(by: city) else { return }
-        var urlRequest = URLRequest(url: url)
-        urlRequest.httpMethod = "GET"
         
-        URLSession.shared.dataTask(with: urlRequest) { data, response, error in
-            guard let data = data else { return }
-            do {
-                let welcome = try JSONDecoder().decode(Welcome.self, from: data)
-                DispatchQueue.main.async {
-                    onCompleted(welcome)
+        AF.request(url).responseData { response in
+            switch response.result {
+            case .success(let data):
+                do {
+                    let welcome = try JSONDecoder().decode(Welcome.self, from: data)
+                    DispatchQueue.main.async {
+                        onCompleted(welcome)
+                    }
+                } catch (let e) {
+                    DispatchQueue.main.async {
+                        onError?(e.localizedDescription)
+                    }
                 }
-            } catch (let e) {
-                DispatchQueue.main.async {
-                    onError?(e.localizedDescription)
-                }
+            case .failure(let error):
+                onError?(error.localizedDescription)
             }
-        }.resume()
+        }
     }
     
     func getWeatherCoordinate(by lat: Double?, and lon: Double?, onCompleted: @escaping (Welcome) -> (),
                               onError: ((String?) -> ())?) {
         guard let url = API.map.getCoordinatesURL(by: lat ?? 0.0, and: lon ?? 0.0) else { return }
-        var urlRequest = URLRequest(url: url)
-        urlRequest.httpMethod = "GET"
-        URLSession.shared.dataTask(with: urlRequest) { data, response, error in
-            guard let data = data else { return }
-            do {
-                let welcome = try JSONDecoder().decode(Welcome.self, from: data)
-                DispatchQueue.main.async {
-                    onCompleted(welcome)
+        AF.request(url).responseData { response in
+            switch response.result {
+            case .success(let data):
+                do {
+                    let welcome = try JSONDecoder().decode(Welcome.self, from: data)
+                    DispatchQueue.main.async {
+                        onCompleted(welcome)
+                    }
+                } catch (let e) {
+                    DispatchQueue.main.async {
+                        onError?(e.localizedDescription)
+                    }
                 }
-            } catch (let e) {
-                DispatchQueue.main.async {
-                    onError?(e.localizedDescription)
-                }
+            case .failure(let error):
+                onError?(error.localizedDescription)
             }
-        }.resume()
+        }
     }
-    
+     
     func getNews(onCompleted: @escaping (WelcomeNews) -> (),
                  onError: ((String?) -> ())?) {
         guard let url = APINews.news.getNewsURL() else { return }
-        var urlRequest = URLRequest(url: url)
-        urlRequest.httpMethod = "GET"
-        urlRequest.setValue(APINews.APITokenNews.rawValue, forHTTPHeaderField: "X-Api-Key")
-        URLSession.shared.dataTask(with: urlRequest) { data, response, error in
-            guard let data = data else { return }
-            do {
-                let welcomeNews = try JSONDecoder().decode(WelcomeNews.self, from: data)
-                DispatchQueue.main.async {
-                    onCompleted(welcomeNews)
+        
+        AF.request(url, headers: (["X-Api-Key" : APINews.APITokenNews.rawValue])).responseData { response in
+            switch response.result {
+            case .success(let data):
+                do {
+                    let welcomeNews = try JSONDecoder().decode(WelcomeNews.self, from: data)
+                    DispatchQueue.main.async {
+                        onCompleted(welcomeNews)
+                    }
+                } catch (let e) {
+                    DispatchQueue.main.async {
+                        onError?(e.localizedDescription)
+                    }
                 }
-            } catch (let e) {
-                DispatchQueue.main.async {
-                    onError?(e.localizedDescription)
-                }
+            case .failure(let error):
+                onError?(error.localizedDescription)
             }
-        }.resume()
+        }
     }
 }

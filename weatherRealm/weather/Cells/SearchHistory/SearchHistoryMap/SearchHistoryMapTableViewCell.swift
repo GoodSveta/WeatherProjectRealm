@@ -89,7 +89,8 @@ class SearchHistoryMapTableViewCell: UITableViewCell {
     }
     
     @IBAction func clickButtonDelete(_ sender: UIButton) {
-        CoreDataManager.shared.cleareDBbyDate(date: Int64(date ?? 0))
+        RealmManager.shared.deleteRealmByDate(date: Int64(date ?? 0))
+//        CoreDataManager.shared.cleareDBbyDate(date: Int64(date ?? 0))
         clickDeleteRow?()
     }
     

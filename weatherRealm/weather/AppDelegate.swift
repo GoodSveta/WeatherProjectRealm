@@ -10,6 +10,7 @@ import GoogleMaps
 import Firebase
 import FirebaseCore
 import GoogleMobileAds
+import AlamofireNetworkActivityLogger
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -26,6 +27,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         TimerADs.sharedTimer.startTimer()
         
 //        GMSPlacesClient.provideAPIKey("YOUR_API_KEY")
+        NetworkActivityLogger.shared.level = .debug
+        NetworkActivityLogger.shared.startLogging()
         return true
     }
 

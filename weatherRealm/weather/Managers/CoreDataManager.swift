@@ -9,7 +9,7 @@
 import CoreData
 
 enum SourceType: String {
-    case wearherCity
+    case weatherCity
     case weatherMap
 }
 

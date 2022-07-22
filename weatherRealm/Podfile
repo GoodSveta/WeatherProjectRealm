@@ -14,5 +14,7 @@ pod 'lottie-ios'
 pod 'NVActivityIndicatorView'
 pod 'Google-Mobile-Ads-SDK'
 pod 'RealmSwift'
+pod 'AlamofireNetworkActivityLogger', '~> 3.4'
+pod 'Alamofire'
 
 end
