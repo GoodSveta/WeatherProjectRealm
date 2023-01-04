@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MdR-8B-dVK">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Weather-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="StartCityViewController" customModule="weather" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image=" mountains" translatesAutoresizingMaskIntoConstraints="NO" id="1n7-dx-naS" userLabel="mountains">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                            </imageView>
+                            <textField opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter the name of the city" textAlignment="natural" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="HPU-N9-HPi">
+                                <rect key="frame" x="70" y="353.66666666666669" width="235" height="34"/>
+                                <color key="backgroundColor" systemColor="systemGray4Color"/>
+                                <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8se-ch-zzq">
+                                <rect key="frame" x="178.33333333333334" y="407.66666666666669" width="18.333333333333343" height="17"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Ok" subtitle="" cornerStyle="large" titleAlignment="center">
+                                    <backgroundConfiguration key="background" strokeWidth="1" strokeOutset="9">
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="strokeColor" systemColor="systemYellowColor"/>
+                                    </backgroundConfiguration>
+                                    <directionalEdgeInsets key="contentInsets" top="0.0" leading="0.0" bottom="0.0" trailing="0.0"/>
+                                    <color key="baseForegroundColor" systemColor="systemYellowColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="buttonClickOk:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="YvQ-6K-Jba"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ixz-x9-tUl" customClass="LTMorphingLabel" customModule="LTMorphingLabel">
+                                <rect key="frame" x="187.66666666666666" y="333.66666666666669" width="0.0" height="0.0"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="30"/>
+                                <color key="textColor" systemColor="systemYellowColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lH5-Kd-LiR">
+                                <rect key="frame" x="67.666666666666686" y="454.66666666666669" width="240" height="65.000000000000057"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="LKr-1R-T6d"/>
+                                    <constraint firstAttribute="height" constant="65" id="UEz-od-uwz"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lb7-eh-kU5">
+                                <rect key="frame" x="154" y="471.66666666666669" width="67" height="31"/>
+                                <color key="tintColor" red="0.14044082252738935" green="0.15496554376302241" blue="0.13469595330811149" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="buttonClickHictory:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="P4j-XH-q6c"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="HPU-N9-HPi" firstAttribute="top" secondItem="Ixz-x9-tUl" secondAttribute="bottom" constant="20" id="22r-VH-WdU"/>
+                            <constraint firstItem="lH5-Kd-LiR" firstAttribute="top" secondItem="8se-ch-zzq" secondAttribute="bottom" constant="30" id="2df-f5-sK6"/>
+                            <constraint firstItem="lH5-Kd-LiR" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="3f3-37-jOp"/>
+                            <constraint firstItem="8se-ch-zzq" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="EYA-XL-Gmo"/>
+                            <constraint firstItem="Lb7-eh-kU5" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" multiplier="1.2" id="GVP-An-bu4"/>
+                            <constraint firstItem="1n7-dx-naS" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="GbJ-4R-L6V"/>
+                            <constraint firstItem="lH5-Kd-LiR" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" multiplier="1.2" id="HCF-9u-66N"/>
+                            <constraint firstItem="8se-ch-zzq" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Ivs-gw-s6F"/>
+                            <constraint firstItem="HPU-N9-HPi" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="70" id="RYi-XZ-B6C"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="HPU-N9-HPi" secondAttribute="trailing" constant="70" id="UKK-Va-GMX"/>
+                            <constraint firstItem="1n7-dx-naS" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="gbw-Vd-slR"/>
+                            <constraint firstItem="1n7-dx-naS" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="gnf-vX-mXA"/>
+                            <constraint firstAttribute="bottom" secondItem="1n7-dx-naS" secondAttribute="bottom" id="mhe-bz-dzn"/>
+                            <constraint firstItem="Ixz-x9-tUl" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="mpB-RB-OlB"/>
+                            <constraint firstItem="8se-ch-zzq" firstAttribute="top" secondItem="HPU-N9-HPi" secondAttribute="bottom" constant="20" id="uQo-p7-5bB"/>
+                            <constraint firstItem="Lb7-eh-kU5" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="z95-Pa-l24"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Weather" id="9CD-3n-Q0h">
+                        <imageReference key="image" image="cloud.sun.fill" catalog="system" symbolScale="large" renderingMode="hierarchical">
+                            <hierarchicalColors>
+                                <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color systemColor="tertiaryLabelColor"/>
+                            </hierarchicalColors>
+                        </imageReference>
+                        <imageReference key="selectedImage" image="cloud.sun.fill" catalog="system" symbolScale="large" renderingMode="hierarchical">
+                            <hierarchicalColors>
+                                <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color systemColor="tertiaryLabelColor"/>
+                            </hierarchicalColors>
+                        </imageReference>
+                    </tabBarItem>
+                    <navigationItem key="navigationItem" id="w3H-Sd-qWi"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="buttonHistory" destination="Lb7-eh-kU5" id="V3O-aY-LFe"/>
+                        <outlet property="labelWeather" destination="Ixz-x9-tUl" id="hHV-Mq-wk5"/>
+                        <outlet property="lottieView" destination="lH5-Kd-LiR" id="jZa-6c-HaZ"/>
+                        <outlet property="textFieldText" destination="HPU-N9-HPi" id="1bL-EH-xJr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="997.10144927536237" y="43.526785714285715"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="W7p-kl-mRY">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MdR-8B-dVK" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qhR-af-ude">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="A1u-qr-iTy"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="643-f5-ySd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="86.956521739130437" y="43.526785714285715"/>
+        </scene>
+    </scenes>
+    <designables>
+        <designable name="Ixz-x9-tUl"/>
+    </designables>
+    <resources>
+        <image name=" mountains" width="827" height="1247"/>
+        <image name="cloud.sun.fill" catalog="system" width="128" height="95"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tertiaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

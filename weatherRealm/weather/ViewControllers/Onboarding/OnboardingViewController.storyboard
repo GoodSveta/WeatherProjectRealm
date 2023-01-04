@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Onboarding View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="OnboardingViewController" customModule="weather" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image=" mountains" translatesAutoresizingMaskIntoConstraints="NO" id="buz-zR-SMQ">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1yv-JJ-Zft" customClass="LTMorphingLabel" customModule="LTMorphingLabel">
+                                <rect key="frame" x="207" y="403" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="38"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HGi-Dn-m4f" customClass="NVActivityIndicatorView" customModule="NVActivityIndicatorView">
+                                <rect key="frame" x="182" y="423" width="50" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="6Pq-8n-Edf"/>
+                                    <constraint firstAttribute="width" constant="50" id="Xxq-E3-dBI"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="typeName" value="ballPulse"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                        <color key="value" red="0.30629343209999998" green="0.2913424818" blue="0.29081459520000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="buz-zR-SMQ" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="3ph-kD-pMS"/>
+                            <constraint firstItem="1yv-JJ-Zft" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="ByF-5I-aD2"/>
+                            <constraint firstItem="buz-zR-SMQ" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="a4B-j6-jqt"/>
+                            <constraint firstItem="1yv-JJ-Zft" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" multiplier="0.9" id="cBT-tf-3PC"/>
+                            <constraint firstItem="HGi-Dn-m4f" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="nCi-W8-j5a"/>
+                            <constraint firstAttribute="bottom" secondItem="buz-zR-SMQ" secondAttribute="bottom" id="nyA-EF-3IQ"/>
+                            <constraint firstItem="buz-zR-SMQ" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="wz2-bw-cLB"/>
+                            <constraint firstItem="HGi-Dn-m4f" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="zIZ-yh-CxQ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="bsR-ky-nif"/>
+                    <connections>
+                        <outlet property="activityIndicatorView" destination="HGi-Dn-m4f" id="Tlv-ce-Yri"/>
+                        <outlet property="labelWeather" destination="1yv-JJ-Zft" id="v6n-Z1-s7I"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="931.88405797101461" y="36.830357142857139"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="jJ6-WE-SlZ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UkC-OJ-Uo2" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="NaD-bk-y52">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="kri-wf-6Td"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="809-Ga-NHS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="21.739130434782609" y="36.830357142857139"/>
+        </scene>
+    </scenes>
+    <designables>
+        <designable name="1yv-JJ-Zft"/>
+    </designables>
+    <resources>
+        <image name=" mountains" width="827" height="1247"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

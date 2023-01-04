@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--GoogleMap-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="GoogleMapViewController" customModule="weather" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SlV-R9-sjJ" customClass="GMSMapView">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xIQ-yx-dQk">
+                                <rect key="frame" x="30" y="151.5" width="354" height="55"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N2h-2X-Kaq" customClass="LTMorphingLabel" customModule="LTMorphingLabel">
+                                        <rect key="frame" x="10" y="5" width="334" height="0.0"/>
+                                        <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="13"/>
+                                        <color key="textColor" red="0.21436595950000001" green="0.21436595950000001" blue="0.21436595950000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8o8-0A-61O" customClass="LTMorphingLabel" customModule="LTMorphingLabel">
+                                        <rect key="frame" x="181" y="45" width="165" height="0.0"/>
+                                        <fontDescription key="fontDescription" name="GillSans-BoldItalic" family="Gill Sans" pointSize="11"/>
+                                        <color key="textColor" red="0.21436595950000001" green="0.21436595950000001" blue="0.21436595950000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="U3U-8K-P4V">
+                                        <rect key="frame" x="10" y="10" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="EoE-io-Kgq"/>
+                                            <constraint firstAttribute="height" constant="30" id="ZRh-FF-S1b"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oCl-MM-bNk" customClass="LTMorphingLabel" customModule="LTMorphingLabel">
+                                        <rect key="frame" x="45" y="10" width="0.0" height="30"/>
+                                        <fontDescription key="fontDescription" name="GillSans-BoldItalic" family="Gill Sans" pointSize="18"/>
+                                        <color key="textColor" systemColor="systemYellowColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W0n-wa-a59" customClass="LTMorphingLabel" customModule="LTMorphingLabel">
+                                        <rect key="frame" x="10" y="45" width="159" height="0.0"/>
+                                        <fontDescription key="fontDescription" name="GillSans-BoldItalic" family="Gill Sans" pointSize="11"/>
+                                        <color key="textColor" red="0.21436595950000001" green="0.21436595950000001" blue="0.21436595950000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                        <size key="shadowOffset" width="0.0" height="0.0"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.22352014408571652" green="0.22352014408571652" blue="0.22352014408571652" alpha="0.42146548639999998" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="U3U-8K-P4V" firstAttribute="top" secondItem="N2h-2X-Kaq" secondAttribute="bottom" constant="5" id="0wi-NS-QpN"/>
+                                    <constraint firstAttribute="trailing" secondItem="8o8-0A-61O" secondAttribute="trailing" constant="8" id="Hhh-b7-RoR"/>
+                                    <constraint firstItem="N2h-2X-Kaq" firstAttribute="centerX" secondItem="xIQ-yx-dQk" secondAttribute="centerX" id="Htu-r4-Zw2"/>
+                                    <constraint firstAttribute="bottom" secondItem="W0n-wa-a59" secondAttribute="bottom" constant="10" id="NJg-Bl-IKZ"/>
+                                    <constraint firstItem="8o8-0A-61O" firstAttribute="leading" secondItem="W0n-wa-a59" secondAttribute="trailing" constant="12" id="Nvf-9a-UXo"/>
+                                    <constraint firstItem="oCl-MM-bNk" firstAttribute="bottom" secondItem="U3U-8K-P4V" secondAttribute="bottom" id="PW0-B0-B3H"/>
+                                    <constraint firstItem="8o8-0A-61O" firstAttribute="width" secondItem="W0n-wa-a59" secondAttribute="width" multiplier="1.03571" id="RfJ-Py-gRT"/>
+                                    <constraint firstItem="N2h-2X-Kaq" firstAttribute="top" secondItem="xIQ-yx-dQk" secondAttribute="top" constant="5" id="SID-CA-5pJ"/>
+                                    <constraint firstItem="8o8-0A-61O" firstAttribute="top" secondItem="W0n-wa-a59" secondAttribute="top" id="WPC-sq-oXT"/>
+                                    <constraint firstAttribute="trailing" secondItem="N2h-2X-Kaq" secondAttribute="trailing" constant="10" id="ZYR-BO-GhA"/>
+                                    <constraint firstItem="W0n-wa-a59" firstAttribute="leading" secondItem="U3U-8K-P4V" secondAttribute="leading" id="d7t-iG-1S1"/>
+                                    <constraint firstItem="oCl-MM-bNk" firstAttribute="leading" secondItem="U3U-8K-P4V" secondAttribute="trailing" constant="5" id="dmn-cR-NhI"/>
+                                    <constraint firstItem="U3U-8K-P4V" firstAttribute="leading" secondItem="xIQ-yx-dQk" secondAttribute="leading" constant="10" id="n6B-4F-wQj"/>
+                                    <constraint firstItem="W0n-wa-a59" firstAttribute="top" secondItem="U3U-8K-P4V" secondAttribute="bottom" constant="5" id="ter-Ls-lnK"/>
+                                    <constraint firstItem="N2h-2X-Kaq" firstAttribute="leading" secondItem="xIQ-yx-dQk" secondAttribute="leading" constant="10" id="tlZ-Dx-MWk"/>
+                                    <constraint firstItem="oCl-MM-bNk" firstAttribute="top" secondItem="U3U-8K-P4V" secondAttribute="top" id="w1D-iW-Fvy"/>
+                                    <constraint firstItem="8o8-0A-61O" firstAttribute="bottom" secondItem="W0n-wa-a59" secondAttribute="bottom" id="yo6-pZ-scs"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BJD-P8-ax8" customClass="GADBannerView">
+                                <rect key="frame" x="47" y="763" width="320" height="50"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="XrE-yo-9Gc"/>
+                                    <constraint firstAttribute="width" constant="320" id="fVY-4b-dZD"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dg5-Sz-Rox">
+                                <rect key="frame" x="182" y="423" width="50" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="QXN-1h-oSt"/>
+                                    <constraint firstAttribute="height" constant="50" id="X6j-B8-shi"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="BJD-P8-ax8" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="0bD-E3-6ls"/>
+                            <constraint firstItem="dg5-Sz-Rox" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="5ir-YV-d1f"/>
+                            <constraint firstItem="dg5-Sz-Rox" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="7S7-iJ-Mpw"/>
+                            <constraint firstItem="SlV-R9-sjJ" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="GWe-Sj-8UH"/>
+                            <constraint firstItem="xIQ-yx-dQk" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" multiplier="0.4" id="GyZ-dS-0zt"/>
+                            <constraint firstAttribute="bottom" secondItem="SlV-R9-sjJ" secondAttribute="bottom" id="Jbc-si-1lR"/>
+                            <constraint firstItem="xIQ-yx-dQk" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="KVC-qk-Ps6"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="BJD-P8-ax8" secondAttribute="bottom" id="evw-dI-1DO"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="xIQ-yx-dQk" secondAttribute="trailing" constant="30" id="ffb-ec-XZf"/>
+                            <constraint firstItem="SlV-R9-sjJ" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="fwG-CW-Gvj"/>
+                            <constraint firstItem="SlV-R9-sjJ" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="nPt-an-eZ1"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="GoogleMap" id="WQI-wm-fQv">
+                        <imageReference key="image" image="map" catalog="system" renderingMode="hierarchical-single">
+                            <hierarchicalColors>
+                                <color systemColor="systemYellowColor"/>
+                                <color systemColor="secondaryLabelColor"/>
+                                <color systemColor="tertiaryLabelColor"/>
+                            </hierarchicalColors>
+                        </imageReference>
+                    </tabBarItem>
+                    <navigationItem key="navigationItem" id="mgZ-dn-MOq"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="bannerView" destination="BJD-P8-ax8" id="m9v-lj-sVE"/>
+                        <outlet property="googleMapView" destination="SlV-R9-sjJ" id="7Ld-Ym-Frx"/>
+                        <outlet property="imageIcon" destination="U3U-8K-P4V" id="HfJ-XZ-jeR"/>
+                        <outlet property="infoView" destination="xIQ-yx-dQk" id="PQT-Tn-HXB"/>
+                        <outlet property="labelCity" destination="N2h-2X-Kaq" id="HFg-Ey-o0B"/>
+                        <outlet property="labelTemp" destination="oCl-MM-bNk" id="CqM-Au-tWg"/>
+                        <outlet property="labelWind" destination="8o8-0A-61O" id="ayz-nJ-fDU"/>
+                        <outlet property="lottieView" destination="dg5-Sz-Rox" id="sFw-9N-wWm"/>
+                        <outlet property="tempIsFeltLabel" destination="W0n-wa-a59" id="oY3-0q-2Rd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="931.88405797101461" y="36.830357142857139"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="4iX-Fe-Hcx">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="e1L-oW-ZIT" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="x31-VH-aO1">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="Xu8-Jz-Paf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sdQ-Su-d9N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="21.739130434782609" y="36.830357142857139"/>
+        </scene>
+    </scenes>
+    <designables>
+        <designable name="8o8-0A-61O"/>
+        <designable name="N2h-2X-Kaq"/>
+        <designable name="W0n-wa-a59"/>
+        <designable name="oCl-MM-bNk"/>
+    </designables>
+    <resources>
+        <image name="map" catalog="system" width="128" height="110"/>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tertiaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
